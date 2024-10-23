@@ -1,0 +1,34 @@
+/* style.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Video should cover the entire section */
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the whole area */
+  z-index: -1; /* Place the video behind the content */
+}
+
+/* Overlay to darken the video (optional) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity for the overlay */
+  z-index: 0; /* Ensure overlay is above the video */
+}
+
+/* Container and content styling */
+.container {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the video */
+}
