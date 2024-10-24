@@ -28,7 +28,7 @@ body, html {
 /*}*/
 
 /* Container and content styling */
-.container {
+/*.container {
   position: relative;
-  z-index: 1; /* Ensure the content is above the video */
-}
+  z-index: 1;*/ /* Ensure the content is above the video */
+/*}*/
