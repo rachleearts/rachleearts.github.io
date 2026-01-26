@@ -16,9 +16,21 @@ body {
 	padding: 0 1rem;
 }
 
+.avatar {
+	width: 200px;
+  	height: 200px;
+  	border-radius: 50%;
+  	object-fit: cover;
+	object-position: center 20%;
+}
+
 .title {
 	font-size: clamp(2rem, 8vw, 4rem);
 	font-weight: 800;
+  	display: inline-flex;
+  	align-items: center; 
+  	gap: 50px;
+	margin-bottom: 10px;
 }
 
 .bold {
