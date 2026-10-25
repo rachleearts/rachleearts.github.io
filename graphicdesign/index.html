@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&#128075; Rachel Lee</title>
+		
+    </head>
+    
+    <body>
+	<header id="top"></header>
+	<div class="wrapper">
+		<p class="title">
+			<!--<img src="assets/avatar.png" alt="avatar.png" class="avatar">-->
+			Rachel Lee
+		</p>
+		<p class="bold">I'm a Scientific illustrator with a lifelong passion for art, science, and technology!</p>
+		<p class="medium">Currently looking for work.</p>
+		<p class="medium">Loves <span id="emoji">&#127912;</span></p> <!-- utf-8 -->
+		<br>
+		<a class="medium hover-underline" href="http://linkedin.com/in/rachel-lee7" target="_blank">LinkedIn</a>
+		<a class="medium hover-underline" href="assets/RachelLee_resume.pdf" target="_blank" style= "display: inline-block; margin-left: 1rem">Download resume</a>
+		<p style="color:#078adb" class="medium"><span class="hover-underline pointer" onclick="showPopup(); 
+			copyToClipboard('rach.lee.arts@gmail.com')">rach.lee.arts@gmail.com</span> &#128203;
+			<span id="popup" class="popup-text" style=color:black> Copied!</span></p>
+		
+		<br><br><br><br>
+		<nav class="navigation">
+            <a href="index.html" class="medium hover-underline">MEDICAL VISUALIZATION WORKS</a>
+            <a href="page2.html" class="medium hover-underline current-page">GRAPHIC DESIGN WORKS</a>
+        </nav>
+		<br><br>
+		
+		<p class="bold">Graphic Design</p>
+		<div class="container">
+			
+			<div class="card">
+				<div class="content">
+					<p class="bold">Signage</p>
+					<p class="medium">Softwares: Photoshop, Illustrator</p>
+					<p class="medium">Poster created to advertise services and direct people towards a specific room.</p>
+					<img src="assets/graphic1.png" alt="graphic1.png">
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="content">
+					<p class="bold">Floor Map</p>
+					<p class="medium">Softwares: Photoshop, Illustrator</p>
+					<p class="medium">Minimalistic map created to help patients arrive at their intended destinations.</p>
+					<img src="assets/graphic2.png" alt="graphic2.png">
+				</div>
+			</div>
+
+			
+			<div class="card">
+				<div class="content">
+					<p class="bold">Conservation poster</p>
+					<p class="medium">Softwares: Photoshop, Illustrator</p>
+					<p class="medium">Poster created for the <a href="https://montereybay.noaa.gov/" target="_blank" class="hover-underline">Monterey Bay National Marine Sanctuary</a>.</p>
+					<img src="assets/whale.png" alt="whale.png">
+				</div>
+			</div>
+			
+		</div>
+		
+		<p style="text-align: right;">
+			<a href="#top" class="medium hover-underline">Back to top</a>
+		</p>
+		
+		<br><br>
+		
+	</div>
+	
+	<script>
+		//unicode
+		//palette, pawprint, gi, camping, gaming, plant, sushi, beach
+		const emojis = ['\u{1F3A8}', '\u{1F43E}', '\u{1F94B}','\u{1F3D5}\ufe0f', '\u{1F3AE}', '\u{1F331}', '\u{1F363}', '\u{1F3D6}\ufe0f'];
+		let index = 0;
+	
+		setInterval(() => {
+		  index = (index + 1) % emojis.length;
+		  document.getElementById('emoji').textContent = emojis[index];
+		}, 2000); // 2000ms = 2 seconds
+	</script>
+
+	<script>
+		function showPopup() {
+		  const popup = document.getElementById('popup');
+		  popup.classList.add('show');
+		  setTimeout(() => {
+			popup.classList.remove('show');
+		  }, 1000);
+		}
+	</script>
+
+	<script>
+		function copyToClipboard(text) {
+		  navigator.clipboard.writeText(text)
+		}
+	</script>
+	
+    </body>
+	
+</html>
